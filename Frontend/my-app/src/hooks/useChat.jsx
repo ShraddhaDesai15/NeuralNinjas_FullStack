@@ -33,7 +33,9 @@ export const useChat = (initialMessage = "Hello! I'm your Personal Insights Assi
       const payload = { context };
       if (dashboardData) payload.dashboardData = dashboardData;
 
-      const response = await fetch('http://localhost:8000/api/ai/ask', {
+      //const response = await fetch('http://localhost:8000/api/ai/ask',
+        const response = await fetch('http://https://neuralninjas-fullstack.onrender.com/api/ai/ask',
+        {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

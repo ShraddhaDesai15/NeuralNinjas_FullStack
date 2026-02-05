@@ -6,7 +6,9 @@ export const useAnalytics = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const API_BASE = "http://localhost:8000/api";
+    // const API_BASE = "http://localhost:8000/api";
+    const API_BASE = "https://neuralninjas-fullstack.onrender.com/api";
+    
     
     Promise.all([
       fetch(`${API_BASE}/analytics/overview`).then(res => res.json()),

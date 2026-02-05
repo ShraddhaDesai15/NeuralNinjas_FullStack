@@ -314,11 +314,14 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
       try {
         setLoading(true);
-        const BASE_URL = 'http://127.0.0.1:8000/api';
+        //const BASE_URL = 'http://127.0.0.1:8000/api';
+        const BASE_URL ='https://neuralninjas-fullstack.onrender.com/api';
 
         const [platforms, preview, insights] = await Promise.all([
            axios.get(`${BASE_URL}/analytics/platform-comparison`),
-          axios.get(`http://127.0.0.1:8000/data-preview`),
+          // axios.get(`http://127.0.0.1:8000/data-preview`),
+          axios.get(`https://neuralninjas-fullstack.onrender.com/data-preview`),
+
           axios.get(`${BASE_URL}/analytics/ai-insights`)
         ]);
 
